@@ -1,28 +1,37 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+//importando componente Header
+import Header from './components/Header'
+import Main from './pages/main'
+//importando estilizacao
+import './styles.css'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+//App tbm um stateless component q renderiza o comp Header
+const App = () => (
+  <div className="App">
+      <Header/>
+      <Main/>
+   </div>
+)
 
 export default App;
+
+//quando uma arrow function usa parenteses no corpo nesse formato () => () , ao inves de () => {}, está apenas omitindo o return
+//assim, os dois são equivalentes
+/*
+  const App = () => {
+  return  
+  <div className="App">
+      <Header/>
+   </div>
+  }
+ 
+  const App = () => (
+  <div className="App">
+      <Header/>
+   </div>
+)
+
+ */  
+
+
+
