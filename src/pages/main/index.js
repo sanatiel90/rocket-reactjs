@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 
 import './styles.css'
 import api from '../../services/api'
+//ao inves de usar tag <a> para links, usar componente Link da lib react-router-dom
+import { Link } from 'react-router-dom'
 
 //componente q renderiza os produtos vindos da api
 class Main extends Component {
@@ -62,7 +64,7 @@ class Main extends Component {
                        <article key={ prod._id }>  
                             <strong>{ prod.title }</strong>
                             <p>{ prod.description }</p>
-                            <a href="#">Acessar</a>
+                            <Link to={`/products/${prod._id}`}>Acessar</Link>
                         </article>
                 ))}
                 <div className="actions">

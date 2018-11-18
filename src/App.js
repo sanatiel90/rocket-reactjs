@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 //importando componente Header
 import Header from './components/Header'
-import Main from './pages/main'
+//importando componente Routes, q define as rotas e vai renderizar componentes de pagina como Main e DetalhaProduct
+import Routes from './routes'
 //importando estilizacao
 import './styles.css'
 
@@ -9,7 +10,7 @@ import './styles.css'
 const App = () => (
   <div className="App">
       <Header/>
-      <Main/>
+      <Routes/>
    </div>
 )
 
